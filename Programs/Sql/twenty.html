@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../program.css">
+</head>
+<body>
+    <pre>
+        Limiting the results to particular number of rows
+        In MySQL, the LIMIT clause is used to restrict the number of rows returned by a query. It is commonly used to retrieve a subset of rows from a result set, especially when dealing with large datasets. Here's the basic syntax:
+        
+        Syntax
+        SELECT column1, column2, ... FROM table_name LIMIT number_of_rows;
+        
+        Example Table : student
+        RollNo	Name	PhoneNo	Class	Marks	City
+        4201	Abhishek	9688258565	BCA-I	296	Chandigarh
+        4202	Anjali	7812569871	BCA-I	246	Punjab
+        4203	Aman	7639927794	BCA-I	286	Punjab
+        4204	Asha	6259927794	BCA-I	156	Haryana
+        Query
+        SELECT * FROM student LIMIT 2;
+        RollNo	Name	PhoneNo	Class	Marks	City
+        4201	Abhishek	9688258565	BCA-I	296	Chandigarh
+        4202	Anjali	7812569871	BCA-I	246	Punjab   
+    </pre>
+</body>
+</html>

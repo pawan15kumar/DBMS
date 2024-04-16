@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../program.css">
+</head>
+<body>
+    <pre>
+        Example of using Commit/Rollback
+        Here's an example of how you might use these statements together:
+        
+        Example Table : student
+        RollNo	Name	PhoneNo	Class	Marks	City
+        4201	Abhishek	9688258565	BCA-I	296	Chandigarh
+        4202	Anjali	7812569871	BCA-I	246	Punjab
+        4203	Aman	7639927794	BCA-I	286	Punjab
+        4204	Asha	6259927794	BCA-I	156	Haryana
+        Query
+        START TRANSACTION;
+        
+        UPDATE student SET marks = marks + 10 where marks < 290;
+        
+        COMMIT;
+        
+        ROLLBACK;
+        
+        SELECT * FROM student;
+        RollNo	Name	PhoneNo	Class	Marks	City
+        4201	Abhishek	9688258565	BCA-I	296	Chandigarh
+        4202	Anjali	7812569871	BCA-I	256	Punjab
+        4203	Aman	7639927794	BCA-I	296	Punjab
+        4204	Asha	6259927794	BCA-I	166	Haryana
+        START TRANSACTION;
+        
+        UPDATE student SET marks = marks + 10 where marks < 290;
+        
+        ROLLBACK;
+        
+        COMMIT;
+        
+        SELECT * FROM student;
+        RollNo	Name	PhoneNo	Class	Marks	City
+        4201	Abhishek	9688258565	BCA-I	296	Chandigarh
+        4202	Anjali	7812569871	BCA-I	246	Punjab
+        4203	Aman	7639927794	BCA-I	286	Punjab
+        4204	Asha	6259927794	BCA-I	156	Haryana
+           
+    </pre>
+</body>
+</html>

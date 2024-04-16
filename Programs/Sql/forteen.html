@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../program.css">
+</head>
+<body>
+    <pre>
+        Updating values
+        To update data in a MySQL table, you use the UPDATE statement. Here's the basic syntax:
+        
+        Syntax
+        Updating a value of column(s)
+        UPDATE table_name SET column1 = value1, column2 = value2, ...;
+        
+        Updating a value of particular columns
+        UPDATE table_name SET column1 = value1, column2 = value2, ... WHERE condition;
+        
+        Example Table : student
+        RollNo	Name	PhoneNo	Class
+        4201	Abhishek	9688258565	NULL
+        4202	Anjali	NULL	NULL
+        4203	Aman	7639927794	NULL
+        4204	Asha	6259927794	NULL
+        Query
+        UPDATE student SET class = 'BCA-I';
+        RollNo	Name	PhoneNo	Class
+        4201	Abhishek	9688258565	BCA-I
+        4202	Anjali	NULL	BCA-I
+        4203	Aman	7639927794	BCA-I
+        4204	Asha	6259927794	BCA-I
+        UPDATE table_name SET PhoneNo = '7812569871' WHERE RollNo = '4202';
+        RollNo	Name	PhoneNo	Class
+        4201	Abhishek	9688258565	BCA-I
+        4202	Anjali	7812569871	BCA-I
+        4203	Aman	7639927794	BCA-I
+        4204	Asha	6259927794	BCA-I  
+    </pre>
+</body>
+</html>

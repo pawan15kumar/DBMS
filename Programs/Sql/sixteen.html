@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../program.css">
+</head>
+<body>
+    <pre>
+        Conditional Retrievel of rows
+        To retrieve rows from a MySQL table based on specific conditions, you can use the SELECT statement along with the WHERE clause. The WHERE clause allows you to specify conditions that filter the rows returned by the query. Here's how you can use it:
+        
+        Syntax
+        SELECT column1, column2, ... FROM table_name WHERE condition;
+        
+        Comparison Operators
+        Operator	Description
+        =	Equal to
+        != or <>	Not equal to
+        <	Less than
+        >	Greater than
+        <=	Less than or equal to
+        >=	Greater than or equal to
+        Logical Operators
+        Operator	Description
+        AND	Logical AND
+        OR	Logical OR
+        NOT	Logical NOT
+        Special Operators
+        Operator	Description
+        IN	Used to specify multiple values in a WHERE clause.
+        BETWEEN	Used to specify a range of values in a WHERE clause.
+        IS NULL	Used to check for NULL values in a column.
+        Example Table : student
+        RollNo	Name	PhoneNo	Class	Marks	City
+        4201	Abhishek	9688258565	BCA-I	296	Chandigarh
+        4202	Anjali	7812569871	BCA-I	246	Punjab
+        4203	Aman	7639927794	BCA-I	286	Punjab
+        4204	Asha	6259927794	BCA-I	156	Haryana
+        Query
+        SELECT Name, Marks FROM student WHERE RollNo = "4202";
+        Name	Marks
+        Anjali	246	
+        
+        SELECT Name, Marks FROM student WHERE RollNo != "4202";
+        Name	Marks
+        Abhishek	296	
+        Aman	286	
+        Asha	156	
+        
+        SELECT Name, Marks FROM student WHERE Marks<246;
+        Name	Marks
+        Asha	156	
+        
+        SELECT Name, Marks FROM student WHERE Marks>286;
+        Name	Marks
+        Abhishek	296	
+        
+        SELECT Name, Marks FROM student WHERE Marks<=246;
+        Name	Marks
+        Asha	156	
+        Anjali	246	
+        SELECT Name, Marks FROM student WHERE Marks>=286;
+        Name	Marks
+        Abhishek	296	
+        Aman	286	
+        
+        SELECT Name, Marks FROM student WHERE name = "Abhishek" and Marks>=286;
+        Name	Marks
+        Abhishek	296	
+        SELECT Name, Marks FROM student WHERE name = "Abhishek" or Marks=286;
+        Name	Marks
+        Abhishek	296	
+        Aman	286	
+        SELECT Name, Marks FROM student WHERE RollNo in("4201", "4203");
+        Name	Marks
+        Abhishek	296	
+        Aman	286	
+        SELECT Name, Marks FROM student WHERE marks between 100 and 200;
+        Name	Marks
+        Asha	156  
+    </pre>
+</body>
+</html>

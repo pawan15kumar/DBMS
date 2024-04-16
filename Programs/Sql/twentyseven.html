@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../program.css">
+</head>
+<body>
+    <pre>
+        Equi Join
+        Equi joins in SQL are a specific type of join where the condition for joining tables is based on the equality of values in specified columns. There are two main types of equi joins:
+        
+        Inner Equi Join : An inner equi join returns only the rows that have matching values in both tables based on the specified join condition.
+        
+        Syntax
+        SELECT columns FROM table1 INNER JOIN table2 ON table1.column_name = table2.column_name;
+        
+        Outer Equi Join : An outer equi join returns all the rows from both tables, along with the matched rows based on the join condition.There are two types of outer equi joins: LEFT OUTER JOIN and RIGHT OUTER JOIN.
+        
+        Syntax
+        SELECT columns FROM table1 LEFT OUTER JOIN table2 ON table1.column_name = table2.column_name;
+        
+        OR
+        
+        SELECT columns FROM table1 RIGHT OUTER JOIN table2 ON table1.column_name = table2.column_name;
+        
+        Example Table : Customers
+        customerID	CustomerName	ContactNo	Country
+        1	Abhishek	6283659862	Germany
+        2	Anjali	7812569871	Mexico
+        3	Aman	7639927794	Mexico
+        Example Table : Orders
+        OrderID	customerId	OrderDate
+        10308	2	1996-09-18
+        10309	37	1996-09-19
+        10310	77	1996-09-20
+        Query
+        SELECT Orders.OrderID, Customers.CustomerName, Orders.OrderDate FROM Orders INNER JOIN Customers ON Orders.customerID=Customers.customerID;
+        OrderID	CustomerName	OrderDate
+        10308	Anjali	1996-09-18
+        SELECT Orders.OrderID, Customers.CustomerName, Orders.OrderDate FROM Orders LEFT OUTER JOIN Customers ON Orders.customerID=Customers.customerID;
+        OrderID	CustomerName	OrderDate
+        10308	Anjali	1996-09-18
+        10309	NULL	1996-09-19
+        10310	NULL	1996-09-20
+        SELECT Orders.OrderID, Customers.CustomerName, Orders.OrderDate FROM Orders RIGHT OUTER JOIN Customers ON Orders.customerID=Customers.customerID;
+        OrderID	CustomerName	OrderDate
+        NULL	Abhishek	NULL
+        10308	Anjali	1996-09-18
+        NULL	Aman	NULL
+           
+    </pre>
+</body>
+</html>

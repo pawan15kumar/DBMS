@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../program.css">
+</head>
+<body>
+    <pre>
+        Granting Permissions to users
+        In MySQL, the GRANT statement is used to grant specific privileges to database users or roles. These privileges can include various permissions such as SELECT, INSERT, UPDATE, DELETE, and more. Here's the basic syntax:
+        
+        Syntax
+        GRANT privileges ON database_name.table_name TO 'user'@'host';
+        
+        Replace privileges with the specific privileges you want to grant, database_name.table_name with the name of the database and table (or * for all tables) you want to grant access to, and 'user'@'host' with the username and host for the user you want to grant access to.
+        
+        Examples
+        1. Example to grant SELECT privileges on all tables in the school database to a user named 'john' from localhost:
+        
+        GRANT SELECT ON school.* TO 'john'@'localhost';
+        
+        2. Example to grant multiple privileges at once:
+        
+        GRANT SELECT, INSERT, UPDATE ON employees.* TO 'john'@'localhost';
+        
+        3. Example to grant all privileges on all tables in the school database to a user named 'john' from localhost:
+        
+        GRANT ALL PRIVILEGES ON school.* TO 'john'@'localhost';
+        
+        4. Example to grant all privileges on all databases to a user named 'john' from localhost:
+        
+        GRANT ALL PRIVILEGES ON *.* TO 'john'@'localhost';  
+    </pre>
+</body>
+</html>

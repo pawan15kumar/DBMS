@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../program.css">
+</head>
+<body>
+    <pre>
+        Droping Columns From Tables
+        To drop (remove) a column from an existing table in MySQL, you use the ALTER TABLE statement with the DROP COLUMN clause. Here's the basic syntax:
+        
+        Syntax
+        ALTER TABLE table_name DROP COLUMN column_name;
+        
+        Query
+        ALTER TABLE student DROP COLUMN DOB;
+        
+        Query OK, 0 rows affected (0.17 sec)
+        Records: 0 Duplicates: 0 Warnings: 0
+        
+        DESC student;
+        Field	Type	Null	Key	Default	Extra
+        RollNo	int	NO	PRI	NULL	
+        Name	varchar(50)	YES		NULL	
+        PhoneNo	varchar(10)	YES		NULL	
+          
+    </pre>
+</body>
+</html>

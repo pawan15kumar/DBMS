@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../program.css">
+</head>
+<body>
+    <pre>
+        Cursors in PL/SQL
+In the context of databases and SQL, a cursor is a database object used to retrieve and manipulate data from a result set returned by a SQL query. Cursors provide a way to iterate over the rows of a result set one at a time, enabling programmatic control over data retrieval and manipulation. Here's an explanation of cursors:
+
+There are two types of Cursors:
+1) Implicit Cursors 2) Explicit Cursors
+
+Attributes of cursors
+Attribute	Description
+%FOUND	Returns TRUE if a fetch operation successfully retrieves a row.
+%NOTFOUND	Returns TRUE if a fetch operation fails to retrieve a row.
+%ROWCOUNT	Returns the number of rows fetched so far.
+%ISOPEN	Returns TRUE if the cursor is open, FALSE if closed.
+
+Basic Functionality :
+Initialization : Cursors are initialized with a SQL query that defines the result set to be processed.
+
+Execution : After initialization, the cursor is executed, and the query is executed against the database to fetch the result set.
+
+Iteration : Cursors allow the program to fetch rows from the result set one at a time. The cursor keeps track of the current position within the result set.
+
+Processing : Each fetched row can be processed individually within the program. This includes reading the values of columns, performing calculations, and executing further logic based on the row's data.
+
+Termination : Cursors are typically closed once all rows in the result set have been processed. Closing the cursor releases associated resources and frees up database server memory.
+
+Cursor Operations :
+Opening : The cursor is opened to execute the associated SQL query and fetch the result set.
+
+Fetching : Rows from the result set are retrieved one by one using the FETCH statement. Each fetch operation advances the cursor to the next row.
+
+Closing : Once all rows have been processed, or when no longer needed, the cursor is closed using the CLOSE statement. This releases database resources associated with the cursor.
+    </pre>
+</body>
+</html>

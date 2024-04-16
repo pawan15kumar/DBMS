@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../program.css">
+</head>
+<body>
+    <pre>
+        Deleting Row(s) from Table
+        To delete data from a MySQL table, you use the DELETE FROM statement. Here's the basic syntax:
+        
+        Syntax
+        Deleting all rows
+        DELETE FROM table_name;
+        
+        Deleting a particular row
+        DELETE FROM table_name WHERE condition;
+        
+        Example Table : student
+        RollNo	Name	PhoneNo
+        4201	Abhishek	9688258565
+        4202	Anjali	NULL
+        4203	Aman	7639927794
+        4204	Asha	6259927794
+        Query
+        DELETE FROM student WHERE rollNo = "4202";
+        RollNo	Name	PhoneNo
+        4201	Abhishek	9688258565
+        4203	Aman	7639927794
+        4204	Asha	6259927794
+        DELETE FROM student;
+        RollNo	Name	PhoneNo  
+    </pre>
+</body>
+</html>

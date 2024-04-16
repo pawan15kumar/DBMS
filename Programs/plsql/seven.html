@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../program.css">
+</head>
+<body>
+    <pre>
+        Triggers in PL/SQL
+        Triggers in SQL are special types of stored procedures that are automatically executed or fired when certain events occur in the database. These events can include data manipulation operations like INSERT, UPDATE, DELETE, or DDL (Data Definition Language) operations like CREATE, ALTER, or DROP.
+        
+        Triggers can be used to enforce business rules, maintain data integrity, and automate database operations. Here's an overview of triggers:
+        
+        Syntax
+        CREATE [OR REPLACE] TRIGGER trigger_name
+        {BEFORE | AFTER} {INSERT | UPDATE | DELETE | [DDL_EVENT]}
+        ON table_name
+        [FOR EACH ROW]
+        DECLARE
+            -- Declarations
+        BEGIN
+            -- Trigger Logic
+        END;
+        Trigger Events:
+        Event	Description
+        INSERT	Triggered before or after inserting a new row into a table.
+        UPDATE	Triggered before or after updating existing rows in a table.
+        DELETE	Triggered before or after deleting rows from a table.
+        CREATE, ALTER, DROP	Triggered before or after executing DDL statements.
+          
+    </pre>
+</body>
+</html>

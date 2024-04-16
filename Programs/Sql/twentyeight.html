@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../program.css">
+</head>
+<body>
+    <pre>
+        Cartesian Join
+        A Cartesian join, also known as a Cartesian product or cross join, is a join operation that returns the Cartesian product of the sets of rows from the joined tables. It means that it produces a result set in which each row from the first table is combined with every row from the second table. This type of join is less common and can result in a large result set, especially when joining tables with a large number of rows. There is essentially only one type of Cartesian join, but it can be performed using different syntax variations:
+        
+        Syntax
+        SELECT columns FROM table1 CROSS JOIN table2;
+        
+        Example Table : Customers
+        customerID	CustomerName	ContactNo	Country
+        1	Abhishek	6283659862	Germany
+        2	Anjali	7812569871	Mexico
+        3	Aman	7639927794	Mexico
+        Example Table : Orders
+        OrderID	customerId	OrderDate
+        10308	2	1996-09-18
+        10309	37	1996-09-19
+        10310	77	1996-09-20
+        Query
+        SELECT Customers.CustomerName, Orders.OrderID FROM Customers CROSS JOIN Orders;
+        CustomerName	OrderID
+        Aman	10308
+        Anjali	10308
+        Abhishek	10308
+        Aman	10309
+        Anjali	10309
+        Abhishek	10309
+        Aman	10310
+        Anjali	10310
+        Abhishek	10310
+         
+    </pre>
+</body>
+</html>

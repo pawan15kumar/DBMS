@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../program.css">
+</head>
+<body>
+    <pre>
+        String Pattern Matching in MySQL
+        In MySQL, you can use the LIKE operator along with wildcard characters to match patterns in strings. Here's how you can use it:
+        
+        Syntax
+        SELECT * FROM table_name WHERE column_name LIKE 'pattern';
+        
+        character	Description
+        % (Percent)	Represents zero or more characters
+        _ (Underscore)	Represents a single character
+        Example Table : student
+        RollNo	Name	PhoneNo	Class	Marks	City
+        4201	Abhishek	9688258565	BCA-I	296	Chandigarh
+        4202	Anjali	7812569871	BCA-I	246	Punjab
+        4203	Aman	7639927794	BCA-I	286	Punjab
+        4204	Asha	6259927794	BCA-I	156	Haryana
+        Query
+        SELECT Name, PhoneNo FROM student WHERE PhoneNo LIKE "7%";
+        Name	PhoneNo
+        Anjali	7812569871
+        Aman	7639927794
+        
+        SELECT Name, PhoneNo FROM student WHERE PhoneNo LIKE "A_h%";
+        Name	PhoneNo
+        Abhishek	9688258565
+        Asha	6259927794  
+    </pre>
+</body>
+</html>

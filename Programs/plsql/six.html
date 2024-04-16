@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../program.css">
+</head>
+<body>
+    <pre>
+        Explicit Cursors
+These cursors are explicitly declared and defined within the PL/SQL code. They provide more control over the result set processing and are suitable for complex queries or scenarios where precise control over data retrieval is required. Explicit cursors are declared using the DECLARE, OPEN, FETCH, and CLOSE statements.
+
+Syntax : Declaration
+CURSOR cursor_name IS statement;
+
+Syntax : Opening
+OPEN cursor_name;
+
+Syntax : Fetch
+FETCH cursor_name INTO variable_name;
+
+Syntax : Closing
+CLOSE cursor_name;
+
+Example Program
+            
+Example Table : student
+RollNo	Name	PhoneNo	Class	Marks	City
+4201	pawan	9688258565	BCA-I	296	Chandigarh
+4202	Anjali	7812569871	BCA-I	246	Punjab
+4203	Aman	7639927794	BCA-I	286	Punjab
+4204	Asha	6259927794	BCA-I	156	Haryana
+
+            
+DECLARE
+    name student.Name%TYPE;
+    CURSOR passed IS SELECT Name FROM student WHERE marks > 250;
+BEGIN
+    OPEN passed;
+    LOOP
+        FETCH passed into name;
+        EXIT WHEN passed%NOTFOUND;
+        dbms_output.put_line(name);
+    END LOOP;
+    CLOSE passed;
+END;
+Output
+pawan
+Aman
+    </pre>
+</body>
+</html>

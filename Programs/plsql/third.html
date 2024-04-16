@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../program.css">
+</head>
+<body>
+    <pre>
+        Variables in PL/SQL
+        In PL/SQL, variables are used to store and manipulate data within a program. They can hold various types of data, such as numbers, characters, dates, and more. Here's how you declare and use variables in PL/SQL:
+        
+        Syntax for Variable Declaration :
+        variable_name datatype [NOT NULL := initial_value];
+        
+        Variable Scope :
+        Variables declared in the declaration section are visible within the block where they are declared.
+        
+        They can be referenced in subsequent PL/SQL statements within the same block.
+        
+        Initializing Variables :
+        Variables can be initialized with an optional default value using the := assignment operator.
+        
+        If a variable is not initialized, it contains a NULL value by default.
+        
+        Syntax for Variable initialization :
+        variable_name := value;
+        
+        Example :
+        DECLARE
+            num1 NUMBER := 10;
+            str1 VARCHAR2(50) := 'Hello, world!';
+        BEGIN
+        END;  
+    </pre>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../program.css">
+</head>
+<body>
+    <pre>
+        Adding New Columns To Tables
+To add a new column to an existing table in MySQL, you can use the ALTER TABLE statement followed by the ADD COLUMN clause. Here's the basic syntax:
+
+Syntax
+ALTER TABLE table_name ADD COLUMN column_name datatype [constraints];
+
+Query
+ALTER TABLE student ADD COLUMN DOB date;
+
+Query OK, 0 rows affected (0.13 sec)
+Records: 0 Duplicates: 0 Warnings: 0
+
+DESC student;
+Field	Type	Null	Key	Default	Extra
+RollNo	int	NO	PRI	NULL	
+Name	varchar(50)	YES		NULL	
+PhoneNo	varchar(10)	YES		NULL	
+DOB	date	YES		NULL	
+
+    </pre>
+</body>
+</html>
